@@ -14,7 +14,7 @@ resource "aws_instance" "vm_instance" {
 
   ebs_block_device {
     device_name           = "/dev/sda1"
-    volume_size           = 128
+    volume_size           = var.volume_size
     volume_type           = "gp3"
     snapshot_id           = "snap-00576a29f5cb985fe"
     iops                  = 3000

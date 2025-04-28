@@ -36,6 +36,12 @@ variable "instance_type" {
   default     = "c7i.large"
 }
 
+variable "volume_size" {
+  type        = number
+  description = "size in gigabytes of the harddrive space to allocate to the virtual machine"
+  default     = 128
+}
+
 variable "aws_key_pair_name" {
   type        = string
   description = "name of an ssh key pair generated in AWS and stored in AWS account"
